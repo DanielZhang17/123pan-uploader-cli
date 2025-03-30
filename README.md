@@ -8,7 +8,7 @@
 - 123云盘大文件快速上传
 - 给定直链的多线程下载
 
-A useful server-side file uploading tool that supports fast uploading of large files to 123Pan Cloud and multi-threaded downloading for direct links.
+A practical server-side file uploading tool that supports fast uploading of large files to 123Pan Cloud and multi-threaded downloading for direct links.
 
 
 ## Technical Details
