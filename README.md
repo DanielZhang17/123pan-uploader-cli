@@ -53,30 +53,43 @@ When running for the first time, if there's no `123pan.txt` authentication file,
 
 ### Interactive Mode
 
-
-In interactive mode:
 1. Enter file or directory path to upload
-2. Use `mget` command to download files: `mget <url> [-o output_file] [-t thread_count] [-s]`
-3. Enter `0` to exit the program
-
-### Multi-threaded Download
-
 ```bash
-# 在交互模式中使用
-# Use in interactive mode
+# Upload file to root directory
+> /path/to/file
+
+# Upload file with custom destination directory name
+> /path/to/file -d "Custom Folder Name"
+
+# Upload and force overwrite existing files
+> /path/to/file -f
+
+# Upload and keep both files (this is default behavior)
+> /path/to/file -k
+
+# Combined options example
+> /path/to/directory -d "My Backups" -f
+```
+2. Use `mget` command to download files: `mget <url> [-o output_file] [-t thread_count] [-s]`
+```bash
+# Starting download: https://your-direct-link → output_filename (using 16 threads)
 > mget https://your-direct-link -o output_filename -t 16
+```
+3. Exit the program
+```bash
+# Type '0' to properly exit the program
+> 0
+
+# Note: Ctrl+C will only interrupt the current operation, not exit the program
 ```
 
 ### Command Line Arguments
 
-```bash
-# 上传文件并自动覆盖同名文件
-# Upload file and automatically overwrite files with the same name
-python app.py /path/to/file -f
+Command-line arguments mirror the options available in interactive mode. You can use `-f` to force overwrite, `-k` to keep both files, and `-d` to specify a custom destination directory name.
 
-# 上传文件并保留两个同名文件
-# Upload file and keep both files with the same name
-python app.py /path/to/file -k
+```bash
+# Combined example with all parameters
+python app.py /path/to/directory -d "My Backups" -f
 ```
 
 
