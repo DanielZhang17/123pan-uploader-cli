@@ -17,7 +17,7 @@ def format_size(size_bytes):
     elif size_bytes < 1024 * 1024 * 1024:
         return f"{size_bytes/(1024*1024):.2f} MB"
     else:
-        return f"{size_bytes/(1024*1024*1024)::.2f} GB"
+        return f"{size_bytes/(1024*1024*1024):.2f} GB"
 
 
 class MPush:
