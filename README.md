@@ -1,6 +1,6 @@
 # 123Pan Uploader CLI
 
-![123Pan](https://img.shields.io/badge/123Pan-Cloud-blue)
+
 ![Python](https://img.shields.io/badge/Python-3.6+-green)
 
 
